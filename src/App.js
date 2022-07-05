@@ -1,10 +1,16 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 function App(){
       const [counter,setValue] = useState(0);
       const onClick = ()=> setValue((prev)=>prev+1);
-  return( 
+      console.log('i run all the time');
      
-  <div >
+       
+       useEffect(()=>{
+        console.log("CALL THE API.....");
+       },[]);
+     return( 
+     
+    <div >
     <h1> {counter}</h1>
     <button onClick={onClick}>click module</button>
     </div>
